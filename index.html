@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bare bones layout</title>
+    <meta http-equiv="refresh" content="30"> <!--refreshes every 30 minutes-->
+
+    <!--external css link-->
+    <link rel="stylesheet" href="styles.css">
+
+    <!--
+    SEO metatags
+    description
+    title
+    author
+    language
+    google
+
+    <meta http-equiv="...">
+    <meta http-equiv="content-type" content="text/html"> 	Specifies the format of the document returned by the server
+    <meta http-equiv="default-style"> 	                    Specifies the format of the styling document
+    <meta http-equiv="refresh"> 	                        Specifies the duration of the page before it’s considered stale
+    <meta http-equiv="Content-language"> 	                Specifies the language of the page
+    <meta http-equiv="Cache-Control" content="no-cache"> 	Instructs the browser how to cache your page
+
+    Responsive design 
+    <meta name="format-detection" content="telephone=yes"> 	                Indicates that telephone numbers should appear as hypertext links
+    <meta name="HandheldFriendly" content="true"> 	                        Specifies that the page can be properly visualized on mobile devices
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 	Specifies the area of the window in which web content can be seen
+    -->
+
+    <!--internal css-->
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header id="top">
+        <div class="contact-info">
+            <div class="info">
+                <img src="images/envelope.png" alt="envelope icon" width="20">
+                abigailbenard@gmail.com
+            </div>
+            <div class="info">
+                <img src="images/phone.png" alt="phone icon" width="20">
+                +230 5761 043154
+            </div>
+        </div>
+        
+        <nav>
+            <a href="home.html">Home</a> |
+            <!--Referring to id-->
+            <a href="#about">About</a> |
+            <a href="#contact">Contact</a> 
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section id="about">
+            <h3>About Us</h3>
+            <!--inline css-->
+            <p style="color: blue; font-size: 15px;">Wanna know more <a href="aboutus.com">about us?</a></p>
+
+        <!-- Unordered List -->
+        I do everything from:
+        <ul>
+            <li>Design</li>
+            <li>Illustration</li>
+        </ul>
+        
+        <!-- Ordered List -->
+        <ol>
+            <li>You can donate <a href="donateathere.com">here</a></li>
+            <li>Take some time to fill in this detailed form: <a href="detailedform.html" target="_blank">Open in new Tab</a></li>
+        </ol> 
+        </section>
+
+        <section id="contact">
+            <div id="contact-me">
+                <h1>Contact Me</h1>
+                <div id="contact">              
+                  <form onsubmit="return validateForm()" method="post">              
+                    <div class="form">             
+                      <h6>Leave me your message and I will be happy to assist you!</h6>
+
+                      <div class="form-group">
+                        <label for="fname">First Name</label>
+                        <input type="text" name="fname" id="fname" placeholder="Your Name">
+                      </div>
+          
+                      <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" name="lname" id="lname" placeholder="Your Last Name">
+                      </div>
+              
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="Your email" required>
+                      </div>
+              
+                      <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" placeholder="Type something..." required></textarea>
+                      </div>
+              
+                      <button type="submit">Submit</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              
+        </section>
+
+        <!--tables-->
+        <section id="table">
+          <h2>Tables</h2>
+          <!--add colspan and rowspan-->
+
+          <table>
+              <tr>
+                <th>Header cell 1</th>
+                <th>Header cell 2</th>
+              </tr>
+              <tr>
+                <td>First row first cell</td>
+                <td>First row second cell</td>
+              </tr>
+              <tr>
+                <td>Second row first cell</td>
+                <td>Second row second cell</td>
+              </tr>
+          </table> 
+
+          <!--colspan-->
+          <table>
+              <tr>
+                <th colspan="2">Name</th>
+                <th>Age</th>
+              </tr>
+              <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>43</td>
+              </tr>
+              <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>57</td>
+              </tr>
+            </table>
+
+          <!--rowspan-->
+          <table>
+              <tr>
+                <th>Name</th>
+                <td>Jill</td>
+              </tr>
+              <tr>
+                <th rowspan="2">Phone</th>
+                <td>555-1234</td>
+              </tr>
+              <tr>
+                <td>555-8745</td>
+            </tr>
+          </table> 
+        </section>
+
+        <article>
+        <!--description list-->
+        <dl>
+          <dt>HTML</dt>
+          <dd>The standard language for creating web pages.</dd>
+            
+          <dt>CSS</dt>
+          <dd>The language used to style HTML content.</dd>
+            
+          <dt>JavaScript</dt>
+          <dd>The programming language that makes web pages interactive.</dd>
+      </dl>
+        </article>
+
+        <aside></aside>
+    </main>
+
+    <footer style="background-color: #f2f2f2; padding: 20px; text-align: center; margin-top: 50px;">
+      <!-- Mini logo -->
+      <img src="images/logo-small.png" alt="Logo" width="50" style="display:block; margin: 0 auto 10px;">
+    
+      <!-- Copyright -->
+      <p>&copy; 2025 Abigail Benard. All rights reserved.</p>
+    
+      <!-- Navigation links -->
+      <nav>
+        <a href="home.html">Home</a> |
+        <a href="#About">About</a> |
+        <a href="#Contact">Contact</a> |
+        <a href="privacy.html">Privacy Policy</a>
+      </nav>
+    
+      <!-- Social media icons -->
+      <p style="margin-top: 10px;">
+        <a href="#"><img src="images/facebook.png" alt="Facebook" width="20"></a>
+        <a href="#"><img src="images/instagram.png" alt="Instagram" width="20"></a>
+        <a href="#"><img src="images/twitter.png" alt="Twitter" width="20"></a>
+      </p>
+    
+      <!-- Back to top link -->
+      <p><a href="#top">Back to top</a></p>
+    </footer>
+    
+
+    <!--internal script-->
+    <script>
+      alert("Hello World");
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

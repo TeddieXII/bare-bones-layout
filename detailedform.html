@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Simple survey form
+    </title>
+
+    <style>
+        body {
+            background-color: hsla(0, 0%, 100%, 0);
+            font-family: Consolas;
+            text-align: left;
+        }
+
+        .options-form {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .options-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .options-form textarea {
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            padding: 10px;
+            width: 75%;
+        }
+
+        .options-form input,
+        .options-form select {
+            border: 1px solid #777;
+            border-radius: 1px;
+            font-family: inherit;
+            padding: 6px;
+            width: 45%;
+        }
+
+        .options-form input[type="radio"],
+        .options-form input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+
+        button {
+            background-color: #bcc2d1;
+            border: 0px solid #777;
+            font-family: inherit;
+            font-size: 18px;
+            width: 50%;
+            margin-top: 10px;
+            margin-bottom: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Web and Multimedia Students survey form</h3>
+
+    <div class="options-form">
+        <label for="gsearch">Search Google:</label>
+        <input type="search" id="gsearch" name="gsearch">
+    </div>
+
+    <div class="options-form">
+        <label for="pwd">Enter Password:</label>
+        <input type="password" id="pwd" name="pwd">
+    </div>
+    
+    <div class="options-form">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[+]{1}[0-9]{11,14}" placeholder="+23012345678">
+    </div>
+
+    <div class="options-form">
+        <label for="homepage">Your Homepage URL:</label>
+        <input type="url" id="homepage" name="homepage" placeholder="https://example.com">
+    </div>
+
+    <div class="options-form">
+        <label for="quantity">Select Quantity (1 to 5):</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="5">
+    </div>
+    
+    <div class="options-form">
+        <label>Submit with image button:</label>
+        <input type="image" src="submit_img.png" alt="Submit" width="48" height="48">
+    </div>
+
+    <form id="form">
+
+        <div class="options-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" />
+        </div>
+
+        <div class="options-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" />
+        </div>
+
+        <div class="options-form">
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Enter your age" min="1" max="120" />
+        </div>
+
+        <div class="options-form">
+            <label for="password">Create a Password:</label>
+            <input type="password" id="password" placeholder="Enter password" />
+        </div>
+
+        <div class="options-form">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" placeholder="e.g. +2301234567" pattern="[+]{1}[0-9]{8,14}" />
+        </div>
+
+        <div class="options-form">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" />
+        </div>
+
+        <div class="options-form">
+            <label for="url">Your Website (optional):</label>
+            <input type="url" id="url" placeholder="https://example.com" />
+        </div>
+
+        <div class="options-form">
+            <label for="role">Choose your academic year:</label>
+            <select name="role" id="role">
+                <option value="first-year">First year</option>
+                <option value="second-year">Second year</option>
+                <option value="third-year">Third year</option>
+            </select>
+        </div>
+
+        <div class="options-form">
+            <label>So far, are the modules trouble-free?</label>
+            <label for="radio-1"><input type="radio" id="radio-1" name="radio">Yes</label>
+            <label for="radio-2"><input type="radio" id="radio-2" name="radio">No</label>
+            <label for="radio-3"><input type="radio" id="radio-3" name="radio">Maybe</label>
+        </div>
+
+        <div class="options-form">
+            <label>Programming languages, if previously studied <small>(Check all that apply)</small></label>
+            <label for="opt-4"><input type="checkbox" id="opt-4" name="inp">Java</label>
+            <label for="opt-5"><input type="checkbox" id="opt-5" name="inp">Python</label>
+            <label for="opt-6"><input type="checkbox" id="opt-6" name="inp">JavaScript</label>
+        </div>
+
+        <div class="options-form">
+            <label for="appt">Preferred Appointment Time:</label>
+            <input type="time" id="appt" name="appt">
+        </div>
+
+        <div class="options-form">
+            <label for="birthdaytime">Birthday (with time):</label>
+            <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+        </div>
+
+        <div class="options-form">
+            <label for="bdaymonth">Birthday (month & year):</label>
+            <input type="month" id="bdaymonth" name="bdaymonth">
+        </div>
+
+        <div class="options-form">
+            <label for="week">Select a week:</label>
+            <input type="week" id="week" name="week">
+        </div>
+
+        <div class="options-form">
+            <label for="volume">Set volume level:</label>
+            <input type="range" id="volume" name="volume" min="0" max="10">
+        </div>
+
+        <div class="options-form">
+            <label for="comment">Other relevant information:</label>
+            <textarea name="comment" id="comment"></textarea>
+        </div>
+
+        <button type="submit" value="submit">Submit form</button>
+
+        <div class="options-form">
+            <input type="reset" value="Reset Form">
+        </div>
+        
+    </form>
+
+    <section>
+        <h3>Media</h3>
+        <div class="options-form">
+            <label for="myfile">Upload your file:</label>
+            <input type="file" id="myfile" name="myfile">
+        </div>        
+
+        <div>
+        <video width="320" height="240" controls>
+            <source src="movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <div>
+        <audio controls>
+            <source src="sound.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        </div>
+    </section>
+
+</body>
+</html>
